@@ -1,0 +1,25 @@
+  GNU nano 7.2                                                                                                   setup_apache.yml                                                                                                            ---
+- name: Actualizar sistema e instalar apache
+  hosts: ubuntu_vm
+  become: yes
+  tasks:
+    - name: Actualizar cache de paquetes
+      apt:
+        update_cache: yes
+
+    - name: Actualizar paquetes instalados
+      apt:
+        upgrade: dist
+        autoremove: yes
+        autoclean: yes
+
+    - name: Instalar apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Asegurar que apache esté iniciado y habilitado
+      service:
+        name: apache2
+        state: started
+        enabled: yes
