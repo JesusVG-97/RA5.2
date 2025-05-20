@@ -1,0 +1,36 @@
+# Ignorar carpeta de Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+
+# Ignorar archivos ISO (imágenes de disco)
+*.iso
+
+# Ignorar discos de máquinas virtuales
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.qcow
+*.img
+*.ova
+
+# Ignorar configuraciones de máquinas virtuales
+*.nvram
+*.vmem
+*.vmsd
+*.vmtm
+*.vmx
+*.vmxf
+
+# Ignorar archivos de Ansible temporales
+*.retry
+
+# Logs y archivos temporales
+*.log
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
