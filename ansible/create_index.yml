@@ -1,0 +1,17 @@
+---
+- name: Crear index.html y reiniciar apache
+  hosts: ubuntu_vm
+  become: yes
+  tasks:
+    - name: Crear archivo index.html con contenido
+      copy:
+        dest: /var/www/html/index.html
+        content: "Ansible rocks"
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Reiniciar servicio apache2
+      service:
+        name: apache2
+        state: restarted
