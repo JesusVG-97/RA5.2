@@ -25,3 +25,10 @@ Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en Vir
 
   **RESULTADO FINAL**
   ![](/img/terrafuncionando.JPG)
+
+### 1. Archivo de inventario (hosts)
+Crea un archivo llamado `hosts` con el siguiente contenido. Asegúrate de reemplazar la IP por la correspondiente a tu VM:
+![](/img/CreacionHosts.JPG)
+[ubuntu_vm]
+192.168.1.143 ansible_user=administrador ansible_connection=ssh
+
