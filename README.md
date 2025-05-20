@@ -29,6 +29,17 @@ Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en Vir
 ### 1. Archivo de inventario (hosts)
 Crea un archivo llamado `hosts` con el siguiente contenido. Asegúrate de reemplazar la IP por la correspondiente a tu VM:
 ![](/img/CreacionHosts.JPG)
-[ubuntu_vm]
-192.168.1.143 ansible_user=administrador ansible_connection=ssh
+### 2. Playbook para actualizar e instalar Apache
+Guarda el siguiente contenido en un archivo llamado setup_apache.yml
+![](/img/ArchivoYML.JPG)
+
+Ejecutar el playbook:
+![](/img/tareasansible2.JPG)
+
+### Errores que he tenido en este apartado
+- Instalar SSHPASS, sino, no permite que hagan ssh a la maquina de terraform + ansible
+  ![](/img/instalamosSSHPASS.JPG)
+- Gracias a chatgpt, he solucionado un error, ya que con contraseña no nos permita por defecto,  he creado una llave publica y la he compartido con la maquina ansible
+  ![](/img/ChatGPT.JPG)
+
 
