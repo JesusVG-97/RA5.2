@@ -19,7 +19,7 @@ Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en Vir
 > ![](3.1-Capturas/maintf.JPG)
 - Comandos utilizados:
   terraform init
-  ![](3.1-Capturas/terraforminit.JPG)
+  ![](3.1-Capturas/terraform_init.JPG)
   terraform apply
   ![](3.1-Capturas/terraformapply.JPG)
 
