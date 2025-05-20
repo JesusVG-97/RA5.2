@@ -3,10 +3,7 @@
 Este documento describe los pasos realizados en la práctica de automatización usando Ansible, desde la provisión de máquinas virtuales hasta la instalación de Apache y la configuración de un sitio web básico.
 
 ---
-
-## 3.1 – Preparación del entorno
-
-### 3.1.1 – Provisionar una máquina virtual Ubuntu 24.04 en VirtualBox con Terraform
+## 3.1 – Provisionar una máquina virtual Ubuntu 24.04 en VirtualBox con Terraform
 
 Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en VirtualBox.
 
@@ -18,18 +15,19 @@ Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en Vir
 > 📷 **Captura del código Terraform:**
 > ![](/img/maintf.JPG)
 - Comandos utilizados:
-  terraform init
+-  terraform init
   ![](/img/terraform_init.JPG)
-  terraform apply
+-  terraform apply
   ![](/img/terraformapply.JPG)
 
   **RESULTADO FINAL**
   ![](/img/terrafuncionando.JPG)
-
-### 1. Archivo de inventario (hosts)
+  
+## 3.2 – Configurar VM Ubuntu 24.04 con Ansible: update, upgrade e instalar Apache
+### 3.2.1 Archivo de inventario (hosts)
 Crea un archivo llamado `hosts` con el siguiente contenido. Asegúrate de reemplazar la IP por la correspondiente a tu VM:
 ![](/img/CreacionHosts.JPG)
-### 2. Playbook para actualizar e instalar Apache
+### 3.2.2 Playbook para actualizar e instalar Apache
 Guarda el siguiente contenido en un archivo llamado setup_apache.yml
 ![](/img/ArchivoYML.JPG)
 
