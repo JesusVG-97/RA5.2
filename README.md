@@ -15,9 +15,9 @@ Se utilizó Terraform para crear una VM con Ubuntu 24.04 automáticamente en Vir
 > 📷 **Captura del código Terraform:**
 > ![](/img/maintf.JPG)
 - Comandos utilizados:
--  terraform init
+  - terraform init
   ![](/img/terraform_init.JPG)
--  terraform apply
+  - terraform apply
   ![](/img/terraformapply.JPG)
 
   **RESULTADO FINAL**
@@ -39,5 +39,14 @@ Ejecutar el playbook:
   ![](/img/instalamosSSHPASS.JPG)
 - Gracias a chatgpt, he solucionado un error, ya que con contraseña no nos permita por defecto,  he creado una llave publica y la he compartido con la maquina ansible
   ![](/img/ChatGPT.JPG)
-
+  
+## 3.3 – Configurar una máquina virtual Ubuntu 24.04 en Virtualbox mediante Ansible.
+3.3.1 Crear un archivo index.html
+Guarda el siguiente contenido en un archivo llamado create_index.yml
+![](/img/CrearIndex.JPG)
+3.3.2 Ejecutar el playbook:
+![](/img/index_ejecutado.JPG)
+3.3.3 Verificar con curl
+Desde el host o cualquier máquina que tenga acceso a la VM, ejecuta
+![](/img/Curl.JPG)
 
